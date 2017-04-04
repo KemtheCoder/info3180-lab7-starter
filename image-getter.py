@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import urlparse
 
-url = "https://www.walmart.com/ip/54649026"
+url = "https://www.walmart.com/ip/TCL-50FS3800-50-1080p-120Hz-Smart-LED-HDTV-with-Roku/45100428"
 result = requests.get(url)
 soup = BeautifulSoup(result.text, "html.parser")
 
@@ -24,3 +24,7 @@ image = """<img src="%s"><br />"""
 for img in soup.findAll("img", src=True):
    print image % urlparse.urljoin(url, img["src"])
    print ''
+   
+   
+   
+def
